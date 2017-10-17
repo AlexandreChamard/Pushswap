@@ -5,12 +5,12 @@
 ** Login   <login_x@epitech.eu>
 **
 ** Started on  Wed Nov  9 16:01:48 2016 John Doe
-** Last update Thu Nov 17 13:07:01 2016 Alexandre Chamard-bois
+** Last update Tue Oct 17 11:28:42 2017 Alexandre Chamard-bois
 */
 
 #include "my.h"
 
-t_print to_be_printed[13] =
+print_t to_be_printed[12] =
 {
   {'d', &call_put_nbr},
   {'i', &call_put_nbr},
@@ -23,8 +23,7 @@ t_print to_be_printed[13] =
   {'p', &call_put_adr},
   {'b', &call_put_b_nbr},
   {'S', &call_putstr_S},
-  {'%', &call_percent},
-  {0, NULL}
+  {'%', &call_percent}
 };
 
 int verif_print(char *str)

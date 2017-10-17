@@ -5,7 +5,7 @@
 ** Login   <alexandre.chamard-bois@epitech.eu>
 **
 ** Started on  Mon Nov 14 21:35:24 2016 Alexandre Chamard-bois
-** Last update Wed Nov 16 15:52:21 2016 Alexandre Chamard-bois
+** Last update Tue Oct 17 11:46:41 2017 Alexandre Chamard-bois
 */
 
 #include "my.h"
@@ -21,7 +21,7 @@ int call_putchar(va_list ap)
 
 int call_percent(va_list ap)
 {
-  ap = ap;
+  (void)ap;
   my_putchar('%');
   return (1);
 }

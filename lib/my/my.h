@@ -5,17 +5,20 @@
 ** Login   <login_x@epitech.eu>
 **
 ** Started on  Thu Nov 10 15:43:36 2016 John Doe
-** Last update Sat Nov 19 18:36:48 2016 Alexandre Chamard-bois
+** Last update Tue Oct 17 11:27:07 2017 Alexandre Chamard-bois
 */
 
-#include <unistd.h>
-#include <stdarg.h>
+#ifndef LIBMY_H_
+# define LIBMY_H_
 
-typedef struct s_print
+# include <unistd.h>
+# include <stdarg.h>
+
+typedef struct	s_print
 {
-  char c;
-  int (*func)(va_list);
-} t_print;
+		char c;
+		int (*func)(va_list);
+} 		print_t;
 
 int my_printf(char *, ...);
 int my_strlen(char *);
@@ -39,3 +42,5 @@ int call_put_X_nbr(va_list);
 int call_putstr(va_list);
 int call_putstr_S(va_list);
 int call_put_adr(va_list);
+
+#endif
