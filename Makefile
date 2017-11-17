@@ -5,7 +5,7 @@
 ## Login   <login_x@epitech.eu>
 ##
 ## Started on  Wed Nov  9 15:12:36 2016 John Doe
-## Last update Tue Oct 17 11:03:00 2017 Alexandre Chamard-bois
+## Last update Fri Nov 17 14:18:34 2017 alexandre Chamard-bois
 ##
 
 CC		=	gcc
@@ -13,31 +13,24 @@ CC		=	gcc
 CFLAGS		=	-W -Wall -Wextra -Werror
 CFLAGS		+=	-I./include
 
-SRC		=	src/print.c			\
-			src/double_tab_sort.c		\
+SRC		=	src/double_tab_sort.c		\
 			src/cocktail.c			\
 			src/merge.c			\
+			src/my_getnbr.c			\
 
 OBJ		=	$(SRC:.c=.o)
-
-MAKE_LIB	=	make -C ./lib/my/
-
-LIB		=	-L./lib/my -lmy
 
 NAME		=	push_swap
 
 all:			$(NAME)
 
 $(NAME)		:	$(OBJ)
-			$(MAKE_LIB)
-			$(CC) -o $(NAME) $(OBJ) $(LIB) $(CFLAGS)
+			$(CC) -o $(NAME) $(OBJ) $(CFLAGS)
 
 clean		:
 			rm -rf $(OBJ)
-			$(MAKE_LIB) clean
 
 fclean		: 	clean
 			rm -rf $(NAME)
-			$(MAKE_LIB) fclean
 
 re		:	fclean all
